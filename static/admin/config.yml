@@ -16,7 +16,7 @@ collections:
   - name: "eyeonicon"
     label: "Eye on Icon"
     folder: src/pages/eyeonicon
-    create: false
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "eyeOnIconKey", widget: "hidden", default: "eyeonicon-episode"}
