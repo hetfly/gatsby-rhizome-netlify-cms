@@ -13,7 +13,7 @@ class EpisodesRoll extends React.Component {
         {episodes &&
           episodes.map(({ node: episode }) => (
             <div className="episode-wrap" key={episode.id}>
-              <div class="episode">
+              <div className="episode">
               {episode.frontmatter.featuredimage ? (
                 <div className="featured-thumbnail">
                   <PreviewCompatibleImage
