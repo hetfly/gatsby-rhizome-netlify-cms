@@ -14,7 +14,6 @@ export const EpisodeTemplate = ({
   title,
   url,
   date,
-  featuredimage,
   guests,
   helmet,
 }) => {
@@ -29,6 +28,9 @@ export const EpisodeTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <div>url: {url}</div>
+            <div>date: {date}</div>
+            <div>guests: {guests}</div>
             <p>{description}</p>
             <EpisodeContent content={content} />
             {tags && tags.length ? (
@@ -79,7 +81,12 @@ const Episode = ({ data }) => {
           </Helmet>
         }
         tags={episode.frontmatter.tags}
+        date={episode.frontmatter.date}
         title={episode.frontmatter.title}
+        url={episode.frontmatter.url}
+        guests={episode.frontmatter.guests}
+        featuredimage={episode.frontmatter.featuredimage}
+        description={episode.frontmatter.description}
       />
     </Layout>
   )
@@ -104,13 +111,6 @@ export const pageQuery = graphql`
         description
         tags
         url
-        featuredimage {
-          childImageSharp {
-            fluid(maxWidth: 120, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         guests
       }
     }
