@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-export default class EpisodesIndexPage extends React.Component {
+export default class EyeOnIconIndexPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -21,13 +21,13 @@ export default class EpisodesIndexPage extends React.Component {
               padding: '1rem',
             }}
           >
-            EPISODES
+            Eye on Icon
           </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              list
+              episodes list
             </div>
           </div>
         </section>
