@@ -9,24 +9,22 @@ class EpisodesRoll extends React.Component {
     const { edges: episodes } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="episodes">
         {episodes &&
           episodes.map(({ node: episode }) => (
-            <div className="is-parent column is-6" key={episode.id}>
-              <article
-                className={`blog-list-item tile is-child box notification`}
-              >
-                <header>
-                  {episode.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: episode.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for episode ${episode.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
+            <div className="episode-wrap" key={episode.id}>
+              <div class="episode">
+              {episode.frontmatter.featuredimage ? (
+                <div className="featured-thumbnail">
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: episode.frontmatter.featuredimage,
+                      alt: `featured image thumbnail for episode ${episode.frontmatter.title}`,
+                    }}
+                  />
+                </div>
+              ) : null}
+                  
                   <p className="episode-meta">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -40,18 +38,8 @@ class EpisodesRoll extends React.Component {
                     <div>url: {episode.frontmatter.url}</div>
                     <div>date: {episode.frontmatter.date}</div>
                     <div>guests: {episode.frontmatter.guests}</div>
-                    <p>{episode.frontmatter.description}</p>
                   </p>
-                </header>
-                <p>
-                  {episode.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={episode.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                </div>
             </div>
           ))}
       </div>

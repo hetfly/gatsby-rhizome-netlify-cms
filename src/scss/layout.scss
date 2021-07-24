@@ -1,0 +1,44 @@
+* {    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-worksans;
+    font-weight: 300;
+    color: $text-color;
+    background-image: linear-gradient(to top , #fff, rgba(#31f2f6, 0.3));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-montserrat;
+    font-weight: 900;
+}
+
+#tsparticles {
+    position: fixed;
+    z-index: 0;
+}
+
+.wrap {
+    width: 100%;
+    max-width: $container-width;
+    padding: $container-padding;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+
+    .navbar {
+        // width: 300px;
+        // margin-right: 30px;
+        position: fixed;
+        height: calc(100vh - 60px);
+    }
+
+    main {
+        margin-left: 330px;
+        flex-grow: 1;
+        @include panel();
+    }
+}

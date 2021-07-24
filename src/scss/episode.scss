@@ -1,0 +1,15 @@
+.episodes {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 40px -15px 0;
+    width: calc(100% + 30px);
+}
+
+.episode-wrap {
+    padding: 15px;
+    width: 33.333%;
+}
+
+.episode {
+    @include card();
+}

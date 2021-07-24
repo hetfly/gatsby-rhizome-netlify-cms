@@ -12,7 +12,7 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <h1>{heading}</h1>
-    <h1>{subheading}</h1>
+    <p>{subheading}</p>
   </div>
 )
 

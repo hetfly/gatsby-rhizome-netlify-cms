@@ -5,11 +5,13 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import Particles from 'react-particles-js';
+import { particlesOptions } from '../../static/configs/particles-config';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -48,10 +50,14 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </div>
+
+      <Particles params={particlesOptions}/>
+      <div className="wrap">
+        <Navbar />
+        <main>{children}</main>
+      </div>
+      
+    </>
   )
 }
 

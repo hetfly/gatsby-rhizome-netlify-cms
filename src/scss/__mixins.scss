@@ -1,0 +1,18 @@
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin panel() {
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px 1px rgba(0,0,0,0.05);
+    padding: 30px;
+    background-color: rgba(255,255,255,0.35);
+}
+
+@mixin card() {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+}

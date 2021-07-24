@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import Footer from './Footer'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,14 +36,13 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link to="/" className="navbar-item">
+              <span>Rhizome<span>dao</span></span>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -55,23 +55,24 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
+          <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
+            <li>
               <Link className="navbar-item" to="/eye-on-icon">
                 Eye on Icon
               </Link>
+            </li>
+            <li>
               <Link className="navbar-item" to="/token">
                 Token
               </Link>
+            </li>
+            <li>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
-            </div>
-          </div>
-        </div>
+            </li>
+          </ul>
+          <Footer />
       </nav>
     )
   }
