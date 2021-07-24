@@ -11,14 +11,14 @@ const Footer = class extends React.Component {
     return ( 
       <footer>
         <div className="socials">
-          <a title="facebook" href="https://facebook.com">
+          <a title="facebook" href="https://facebook.com" target="_blank">
             <img
               src={facebook}
               alt="Facebook"
               style={{ width: '20px', height: '20px' }}
             />
           </a>
-          <a title="twitter" href="https://twitter.com">
+          <a title="twitter" href="https://twitter.com" target="_blank">
             <img
               className="fas fa-lg"
               src={twitter}
@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
               style={{ width: '20px', height: '20px' }}
             />
           </a>
-          <a title="instagram" href="https://instagram.com">
+          <a title="instagram" href="https://instagram.com" target="_blank">
             <img
               src={instagram}
               alt="Instagram"

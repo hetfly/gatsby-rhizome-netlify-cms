@@ -24,23 +24,28 @@ class EpisodesRoll extends React.Component {
                   />
                 </div>
               ) : null}
-                  
-                  <p className="episode-meta">
-                    <Link
+                  <div className="episode-title">
+                  <Link
                       className="title has-text-primary is-size-4"
                       to={episode.fields.slug}
                     >
                       {episode.frontmatter.title}
                     </Link>
-                    <span className="subtitle is-size-5 is-block">
-                      {episode.frontmatter.date}
-                    </span>
-                    <div>url: {episode.frontmatter.url}</div>
-                    <div>date: {episode.frontmatter.date}</div>
-                    <div>guests: {episode.frontmatter.guests}</div>
-                  </p>
+                  </div>
+                  <div className="episode-tags">
+                    <div className='label'>Topics</div>
+                    <div className='value'>{episode.frontmatter.tags}</div>
+                  </div>
+                  <div className="episode-tags">
+                    <div className='label'>Guests</div>
+                    <div className='value'>{episode.frontmatter.guests}</div>
+                  </div>
+                  <div className="episode-description">{episode.frontmatter.description}</div>
+                  <div className="episode-watch">
+                    <a class="btn btn-primary" href={episode.frontmatter.url} target="_blank">Watch Episode</a>
+                  </div>
                 </div>
-            </div>
+              </div>
           ))}
       </div>
     )
@@ -73,6 +78,7 @@ export default () => (
                 title
                 templateKey
                 url
+                tags
                 guests
                 description
                 date

@@ -12,4 +12,30 @@
 
 .episode {
     @include card();
+    
+    &-title {
+        margin-bottom: 15px;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: 20px;
+            font-family: $font-montserrat;
+            font-weight: 900;
+        }
+    }
+
+    &-tags {
+        font-size:14px;
+        display: flex;
+
+        .label {
+            font-weight: 700;
+            min-width: 60px;
+        }
+    }
+
+    &-description {
+        margin: 15px 0;
+    }
 }

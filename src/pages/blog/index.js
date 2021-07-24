@@ -8,8 +8,9 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <h1>Latest Stories</h1>
+        <p>Browse blog posts</p>
         <section className="section">
-          <BlogRoll />
+          {/* <BlogRoll /> */}
         </section>
       </Layout>
     )

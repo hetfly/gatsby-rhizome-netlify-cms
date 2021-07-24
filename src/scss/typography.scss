@@ -2,3 +2,26 @@ h1 {
     margin-top: 0;
     font-size: 60px;
 }
+
+strong {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &-primary {
+        background: darken($main-color, 10%);
+        color: #FFF;
+        font-weight: 700;
+        font-family: $font-montserrat;
+        transition: all ease .25s;
+
+        &:hover, &:focus {
+            background: $main-color;
+        }
+    }
+}
