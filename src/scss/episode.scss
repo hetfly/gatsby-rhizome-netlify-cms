@@ -12,6 +12,15 @@
 
 .episode {
     @include card();
+    overflow: hidden;
+
+    &-img {
+        margin: -20px -20px 30px -20px;
+
+        .gatsby-image-wrapper {
+            border-radius: 0 !important;
+        }
+    }
     
     &-title {
         margin-bottom: 15px;
@@ -22,11 +31,16 @@
             font-size: 20px;
             font-family: $font-montserrat;
             font-weight: 900;
+            transition: all ease 0.25s;
+
+            &:hover, &:focus {
+                color: darken($main-color, 15%);
+            }
         }
     }
 
     &-tags {
-        font-size:14px;
+        font-size:15px;
         display: flex;
 
         .label {

@@ -57,7 +57,7 @@ const Navbar = class extends React.Component {
           </div>
           <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <li>
-              <Link className="navbar-item" to="/eye-on-icon">
+              <Link className="navbar-item" to="/eyeonicon">
                 Eye on Icon
               </Link>
             </li>

@@ -15,22 +15,19 @@ class EpisodesRoll extends React.Component {
             <div className="episode-wrap" key={episode.id}>
               <div className="episode">
               {episode.frontmatter.featuredimage ? (
-                <div className="featured-thumbnail">
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: episode.frontmatter.featuredimage,
-                      alt: `featured image thumbnail for episode ${episode.frontmatter.title}`,
-                    }}
-                  />
+                <div className="episode-img">
+                  <Link to={episode.fields.slug}>
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: episode.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for episode ${episode.frontmatter.title}`,
+                      }}
+                    />
+                  </Link>
                 </div>
               ) : null}
                   <div className="episode-title">
-                  <Link
-                      className="title has-text-primary is-size-4"
-                      to={episode.fields.slug}
-                    >
-                      {episode.frontmatter.title}
-                    </Link>
+                  <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
                   </div>
                   <div className="episode-tags">
                     <div className='label'>Topics</div>
@@ -84,7 +81,7 @@ export default () => (
                 date
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 500, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
