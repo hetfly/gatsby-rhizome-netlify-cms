@@ -12,6 +12,10 @@ export const EpisodeTemplate = ({
   description,
   tags,
   title,
+  url,
+  date,
+  featuredimage,
+  guests,
   helmet,
 }) => {
   const EpisodeContent = contentComponent || Content
@@ -52,6 +56,8 @@ EpisodeTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  url: PropTypes.string,
+  guests: PropTypes.string,
 }
 
 const Episode = ({ data }) => {
@@ -97,6 +103,15 @@ export const pageQuery = graphql`
         title
         description
         tags
+        url
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        guests
       }
     }
   }
