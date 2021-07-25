@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -9,7 +9,9 @@ import Particles from 'react-particles-js';
 import { particlesOptions } from '../../static/configs/particles-config';
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <Helmet>
@@ -52,7 +54,8 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
 
       <Particles params={particlesOptions}/>
-      <div className="wrap">
+      <div className={`wrap${isOpen ? " open" : ""}`}>
+        <div className="burger" onClick={() => setOpen(!isOpen)}><span className='lines'></span></div>
         <Navbar />
         <main>{children}</main>
       </div>

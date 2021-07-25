@@ -6,7 +6,7 @@ export default class EpisodesIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Eye on Icon token</h1>
+        <h1>Eye on Icon Token</h1>
         <section className="section">
           <p>Coming soon !</p>
         </section>

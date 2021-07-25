@@ -7,7 +7,15 @@
 
 .episode-wrap {
     padding: 15px;
-    width: 33.333%;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 1500px) {
+        width: 33.333%;
+    }
 }
 
 .episode {
