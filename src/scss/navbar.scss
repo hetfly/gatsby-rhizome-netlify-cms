@@ -1,69 +1,54 @@
-.navbar {
-    @include panel();
-    display: flex;
-    flex-flow: column;
-    min-height: 450px;
-    transform: translate3d(-500px, 0, 0);
-    transition: all ease 0.25s;
+header {
     z-index: 10;
-    background-color: rgba(255,255,255,0.95);
-    min-width: 300px;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row;
+    transition: all ease 0.25s;
+    width: 100%;
+    align-items: center;    
+    max-width: $container-width;    
+    padding: $container-padding-respo;
+    margin: 0 auto;
 
     @media (min-width: $respoBreak) {
-        transform: translate3d(0, 0, 0);
-        background-color: rgba(255,255,255,0.35);
+        padding: $container-padding;
     }
 
     a {
         text-decoration: none;
-        font-family: $font-montserrat;
-        font-weight: 700;
+        font-weight: 600;
         color: $text-color;
     }
 
     .navbar-brand {        
-        font-size: 32px;
-
-        a {
-            font-family: $font-montserrat;
-            font-weight: 900;
-
-            &:hover {
-                span span {
-                    padding-left: 20px;  
-                    padding-right: 5px;
-                }
-            }
-        }
-
-        span span {
-            font-size: 23px;
-            padding-left: 25px;
-            padding-right: 0;
-            transition: all ease 0.25s;
-            display: none;
-
-            @media (min-width: $respoBreak) {
-                display: inline-flex;
-            }
+        img {
+            max-width: 180px;
         }
     }
 
     &-menu {
         list-style-type: none;
-        margin: 50px 0 0 0;
         padding: 0;
+        display: flex;
+        margin: 0 0 0 auto;
 
         li {
-            border-bottom: 1px solid $color-line;
 
-            
         }
 
         a {
             font-size: 20px;
             display: block;
-            padding: 20px 5px 20px 0;
+            padding: 20px;
             position: relative;
             transition: all ease 0.25s;
 
@@ -81,7 +66,6 @@
             }
 
             &:hover, &:focus {
-                padding: 20px 0 20px 5px;
 
                 &:before {
                     width: 100%;

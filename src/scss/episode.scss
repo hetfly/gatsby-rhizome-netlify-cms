@@ -8,6 +8,7 @@
 .episode-wrap {
     padding: 15px;
     width: 100%;
+    color: $color-black;
 
     @media (min-width: 768px) {
         width: 50%;
@@ -35,9 +36,8 @@
 
         a {
             text-decoration: none;
-            color: $text-color;
+            color: $color-black;
             font-size: 20px;
-            font-family: $font-montserrat;
             font-weight: 900;
             transition: all ease 0.25s;
 

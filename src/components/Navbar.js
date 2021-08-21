@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../img/rhizome-logo.png'
 import Footer from './Footer'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,45 +36,50 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              <span>Rhizome<span>dao</span></span>
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
+      <header>
+        <nav
+          className="navbar"
+          role="navigation"
+          aria-label="main-navigation"
+        >
+            <div className="navbar-brand">
+              <Link to="/" className="navbar-item">
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: logo,
+                    alt: `RHIZOME`,
+                  }} />
+              </Link>
+              {/* Hamburger menu */}
+              <div
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => this.toggleHamburger()}
+              >
+                <span />
+                <span />
+                <span />
+              </div>
             </div>
-          </div>
-          <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
-            <li>
-              <Link className="navbar-item" to="/eyeonicon">
-                Eye on Icon
-              </Link>
-            </li>
-            <li>
-              <Link className="navbar-item" to="/token">
-                Token
-              </Link>
-            </li>
-            <li>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-            </li>
-          </ul>
-          <Footer />
-      </nav>
+            <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
+              <li>
+                <Link className="navbar-item" to="/eyeonicon">
+                  Eye on Icon
+                </Link>
+              </li>
+              <li>
+                <Link className="navbar-item" to="/token">
+                  Token
+                </Link>
+              </li>
+              <li>
+                <Link className="navbar-item" to="/blog">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+        </nav>
+      </header>
     )
   }
 }

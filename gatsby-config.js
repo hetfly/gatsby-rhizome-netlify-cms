@@ -29,16 +29,6 @@ module.exports = {
         name: 'images',
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Montserrat\:900,700`,
-          `Work+Sans\:300`
-        ],
-        display: 'swap'
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
