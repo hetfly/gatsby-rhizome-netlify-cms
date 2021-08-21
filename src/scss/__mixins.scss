@@ -16,7 +16,7 @@
 }
 
 @mixin card() {
-    background: #FFF;
+    background: $color-light;
     border-radius: 10px;
     padding: 20px;
 }

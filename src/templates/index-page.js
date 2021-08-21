@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 
@@ -10,10 +10,29 @@ export const IndexPageTemplate = ({
   heading,
   subheading
 }) => (
-  <div>
-    <h1>{heading}</h1>
-    <p>{subheading}</p>
-  </div>
+  <>
+    <section className='top'>
+      {/* <h1>{heading}</h1>
+      <p>{subheading}</p> */}
+      <h1>Eye on ICON</h1>
+      <p>Latest news from ICON ecosystem with Fez and Icongrapher.</p>
+      <Link to='/episodes' className='btn btn-primary'>See Episodes</Link>
+    </section>
+    <section>
+      <p>with your hosts:</p>
+      <div className='hosts'>
+        <div className='host'>
+          <h2>Fez</h2>
+          <p>photo, description, links</p>
+        </div>
+        <div className='separator'>and</div>
+        <div className='host'>
+          <h2>Icongrapher</h2>
+          <p>photo, description, links</p>
+        </div>
+      </div>
+    </section>
+  </>
 )
 
 IndexPageTemplate.propTypes = {

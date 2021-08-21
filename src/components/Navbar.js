@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/rhizome-logo.png'
+import logo from '../img/logo.svg'
 import Footer from './Footer'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -44,11 +44,7 @@ const Navbar = class extends React.Component {
         >
             <div className="navbar-brand">
               <Link to="/" className="navbar-item">
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: logo,
-                    alt: `RHIZOME`,
-                  }} />
+                <img src={logo} alt='Eye on Icon' width={200} height={70} />
               </Link>
               {/* Hamburger menu */}
               <div
@@ -63,8 +59,8 @@ const Navbar = class extends React.Component {
             </div>
             <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
               <li>
-                <Link className="navbar-item" to="/eyeonicon">
-                  Eye on Icon
+                <Link className="navbar-item" to="/episodes">
+                  Episodes
                 </Link>
               </li>
               <li>
@@ -73,8 +69,8 @@ const Navbar = class extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/blog">
-                  Blog
+                <Link className="navbar-item" to="/contact">
+                  Contact
                 </Link>
               </li>
             </ul>

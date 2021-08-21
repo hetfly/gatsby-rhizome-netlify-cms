@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import PreviewImage from '../img/ep-preview.svg'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class EpisodesRoll extends React.Component {
@@ -14,18 +15,6 @@ class EpisodesRoll extends React.Component {
           episodes.map(({ node: episode }) => (
             <div className="episode-wrap" key={episode.id}>
               <div className="episode">
-              {episode.frontmatter.featuredimage ? (
-                <div className="episode-img">
-                  <Link to={episode.fields.slug}>
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: episode.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for episode ${episode.frontmatter.title}`,
-                      }}
-                    />
-                  </Link>
-                </div>
-              ) : null}
                   <div className="episode-title">
                   <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
                   </div>

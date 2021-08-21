@@ -11,7 +11,7 @@
     color: $color-black;
 
     @media (min-width: 768px) {
-        width: 50%;
+        width: 25%;
     }
 
     @media (min-width: 1500px) {
@@ -22,14 +22,6 @@
 .episode {
     @include card();
     overflow: hidden;
-
-    &-img {
-        margin: -20px -20px 30px -20px;
-
-        .gatsby-image-wrapper {
-            border-radius: 0 !important;
-        }
-    }
     
     &-title {
         margin-bottom: 15px;

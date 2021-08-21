@@ -35,7 +35,7 @@ export const particlesOptions = {
         "value": "#31f2f6",
         "animation": {
           "h": {
-            "speed": 20
+            "speed": 10
           }
         }
       },
@@ -44,7 +44,7 @@ export const particlesOptions = {
           "value": "#31f2f6"
         },
         "enable": true,
-        "opacity": 0.4
+        "opacity": 0.2
       },
       "move": {
         "enable": true,
@@ -55,7 +55,7 @@ export const particlesOptions = {
           "right": "out",
           "top": "out"
         },
-        "speed": 1
+        "speed": 0.3
       },
       "number": {
         "density": {
