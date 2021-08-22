@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 
-export default class EpisodesIndexPage extends React.Component {
+export default class ContactPage extends React.Component {
   render() {
     return (
       <Layout>

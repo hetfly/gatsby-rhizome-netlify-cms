@@ -24,17 +24,8 @@ collections:
       - {label: "URL", name: "url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - label: "Guests"
-        name: "guests" 
-        widget: "select"
-        multiple: true
-        options:
-          - { label: "Scott Smiley", value: "scott-smiley" }
-          - { label: "Parrot9", value: "parrot9" }
-          - { label: "Brian Li", value: "brian-li" }
-          - { label: "Geo Dude", value: "geo-dude" }
+      - {label: "Topics", name: "topics", widget: "text"}
+      - {label: "Guests", name: "guests", widget: "text"}
 
   # - name: "blog"
   #   label: "Blog"
@@ -62,4 +53,12 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+      # - file: "src/pages/contact/contact.md"
+      #   label: "Contact"
+      #   name: "contact"
+      #   fields:
+      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact"}
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Heading, name: heading, widget: string}
+      #     - {label: Subheading, name: subheading, widget: string}
       
