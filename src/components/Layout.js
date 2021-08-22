@@ -16,7 +16,8 @@ const TemplateWrapper = ({ children }) => {
     <>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        {/* <title>{title}</title> */}
+        <title>Eye on ICON</title>
         <meta name="description" content={description} />
 
         <link
