@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import Layout from '../../components/Layout'
 
 export default class ContactPage extends React.Component {
@@ -8,7 +8,26 @@ export default class ContactPage extends React.Component {
       <Layout>
         <section className='top'>
           <h1>Contact Us!</h1>
-          <p>Get in touch with us, have a chat, share you ideas and suggestions.</p>
+          <p>Get in touch with us, have a chat, share you ideas and suggestions!</p>
+        </section>
+        <section>
+          <div className='socials'>
+            <div className='social'>
+              <a href='' target='_blank' rel='noreferrer'>
+                <FaTwitter color='#33b7ba' size={'4em'} />
+              </a>
+            </div>
+            <div className='social'>
+              <a href='' target='_blank' rel='noreferrer'>
+                <FaDiscord color='#33b7ba' size={'4em'} />
+              </a>
+            </div>
+            <div className='social'>
+              <a href='' target='_blank' rel='noreferrer'>
+                <FaTelegramPlane color='#33b7ba' size={'4em'} />
+              </a>
+            </div>
+          </div>
         </section>
       </Layout>
     )
