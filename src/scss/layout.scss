@@ -86,3 +86,30 @@ section {
         align-items: center;
     }
 }
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(darken($main-color, 10%), 0.3);
+    border-radius: 10px;
+    background-color: rgba($color-black, 0.75);
+    max-width: 400px;
+    margin: 30px auto 0;
+
+    img {
+        position: absolute;
+        left: 10px;
+    }
+
+    input {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        height: 40px;
+        padding-left: 45px;
+        color: $text-color;
+        width: 100%;
+    }
+}

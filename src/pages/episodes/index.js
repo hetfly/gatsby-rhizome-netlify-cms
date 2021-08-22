@@ -12,7 +12,7 @@ export default class EyeOnIconIndexPage extends React.Component {
           <p>Podcast description</p>
         </section>
         <section>
-          <p>Browse episodes, filter by <strong>guests</strong> and <strong>topics</strong></p>
+          <p>Search for topics, guests or anything else</p>
         </section>
         
         <section>
