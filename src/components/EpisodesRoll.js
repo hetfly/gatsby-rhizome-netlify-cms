@@ -53,9 +53,9 @@ class EpisodesRoll extends React.Component {
               shouldShow(episode) && (
                 <div className="episode-wrap" key={episode.id}>
                   <div className="episode">
+                    <div className="episde-label" data-label={episode.frontmatter.type}>{episode.frontmatter.type}</div>
                     <div className="episode-title">
                     <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
-                    {episode.frontmatter.type}
                     </div>
                     <div className="episode-tags">
                       <div className='label'>Topics</div>
