@@ -87,6 +87,8 @@ section {
     }
 }
 
+$filterMaxWidth: 400px;
+
 .search-wrap {
     display: flex;
     align-items: center;
@@ -95,12 +97,13 @@ section {
     border: 1px solid rgba(darken($main-color, 10%), 0.3);
     border-radius: 10px;
     background-color: rgba($color-black, 0.75);
-    max-width: 400px;
-    margin: 30px auto 0;
+    max-width: $filterMaxWidth;
+    margin: 7px auto 0;
 
     img {
         position: absolute;
         left: 10px;
+        pointer-events: none;
     }
 
     input {
@@ -111,5 +114,38 @@ section {
         padding-left: 45px;
         color: $text-color;
         width: 100%;
+    }
+}
+
+.types-wrap {
+    max-width: $filterMaxWidth;
+    width: 100%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    button {
+        margin-right: 7px;
+        appearance: none;
+        border: 1px solid rgba(darken($main-color, 10%), 0.3);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+        background: transparent;
+        display: inline-block;
+        padding: 5px 10px 4px;
+        border-radius: 8px;
+        transition: all ease .2s;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &.active {
+            background: #33b7ba;
+            border: 1px solid #33b7ba;
+        }
     }
 }

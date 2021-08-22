@@ -11,35 +11,54 @@
     color: $color-black;
 
     @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 991px) {
+        width: 33.333%;
+    }
+
+    @media (min-width: 1200px) {
         width: 25%;
     }
 
     @media (min-width: 1500px) {
-        width: 33.333%;
+        width: 20%;
     }
 }
 
 .episode {
     @include card();
     height: 100%;
-    overflow: hidden;
     display: flex;
     flex-flow: column;
+    position: relative;
+
+    &-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+        background: #33b7ba;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        transform: translateY(-50%);
+        padding: 4px 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px 2px rgba(27, 27, 27, 0.33);
+    }
     
     &-title {
         margin-bottom: 15px;
+        color: $color-black;
+        font-size: 20px;
+        font-weight: 900;
+    }
 
-        a {
-            text-decoration: none;
-            color: $color-black;
-            font-size: 20px;
-            font-weight: 900;
-            transition: all ease 0.25s;
-
-            &:hover, &:focus {
-                color: darken($main-color, 15%);
-            }
-        }
+    &-date {
+        font-size: 12px;
+        margin-bottom: 15px;
     }
 
     &-tags {

@@ -9,34 +9,20 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      active: false,
-      navBarActiveClass: '',
+      open: false
     }
+
+    this.toggleOpen = this.toggleOpen.bind(this);
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
+  toggleOpen = () => {
+    const currentState = this.state.open;
+    this.setState({open: !currentState});
   }
 
   render() {
     return (
-      <header>
+      <header className={`${this.state.open ? 'open' : ''}`}>
         <nav
           className="navbar"
           role="navigation"
@@ -46,18 +32,8 @@ const Navbar = class extends React.Component {
               <Link to="/" className="navbar-item">
                 <img src={logo} alt='Eye on Icon' width={200} height={70} />
               </Link>
-              {/* Hamburger menu */}
-              <div
-                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                data-target="navMenu"
-                onClick={() => this.toggleHamburger()}
-              >
-                <span />
-                <span />
-                <span />
-              </div>
             </div>
-            <ul className={`navbar-menu ${this.state.navBarActiveClass}`}>
+            <ul className={`navbar-menu`}>
               <li>
                 <Link className="navbar-item" to="/episodes">
                   Episodes
@@ -75,6 +51,8 @@ const Navbar = class extends React.Component {
               </li>
             </ul>
         </nav>
+
+        <div className="burger" onClick={() => this.toggleOpen()}><span className='lines'></span></div>
       </header>
     )
   }

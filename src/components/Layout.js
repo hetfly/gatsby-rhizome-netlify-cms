@@ -10,7 +10,6 @@ import { particlesOptions } from '../../static/configs/particles-config';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
-  const [isOpen, setOpen] = useState(false);
 
   return (
     <>
@@ -55,8 +54,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
 
       <Particles params={particlesOptions}/>
-      <div className={`wrap${isOpen ? " open" : ""}`}>
-        <div className="burger" onClick={() => setOpen(!isOpen)}><span className='lines'></span></div>
+      <div className={`wrap`}>
         <Navbar />
         <main>{children}</main>
       </div>
