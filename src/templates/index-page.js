@@ -12,10 +12,8 @@ export const IndexPageTemplate = ({
 }) => (
   <>
     <section className='top'>
-      {/* <h1>{heading}</h1>
-      <p>{subheading}</p> */}
-      <h1>Eye on ICON</h1>
-      <p>Latest news from ICON ecosystem with Fez and Icongrapher.</p>
+      <h1>{heading}</h1>
+      <p>{subheading}</p>
       <Link to='/episodes' className='btn btn-primary'>See Episodes</Link>
     </section>
     <section>
