@@ -55,6 +55,7 @@ class EpisodesRoll extends React.Component {
                   <div className="episode">
                     <div className="episode-title">
                     <Link to={episode.fields.slug}>{episode.frontmatter.title}</Link>
+                    {episode.frontmatter.type}
                     </div>
                     <div className="episode-tags">
                       <div className='label'>Topics</div>
@@ -108,6 +109,7 @@ export default () => (
                 guests
                 description
                 date
+                type
               }
             }
           }
