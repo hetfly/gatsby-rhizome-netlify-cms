@@ -13,7 +13,7 @@ export default class ContactPage extends React.Component {
         <section>
           <div className='socials'>
             <div className='social'>
-              <a href='' target='_blank' rel='noreferrer'>
+              <a href='https://twitter.com/eyeonicon1' target='_blank' rel='noreferrer'>
                 <FaTwitter color='#33b7ba' size={'4em'} />
               </a>
             </div>
