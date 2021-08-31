@@ -1,11 +1,11 @@
-.episodes {
+.articles {
     display: flex;
     flex-flow: row wrap;
     margin: 15px -15px 0;
     width: calc(100% + 30px);
 }
 
-.episode-wrap {
+.article-wrap {
     padding: 15px;
     width: 100%;
     color: $color-black;
@@ -14,12 +14,12 @@
         width: 50%;
     }
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1300px) {
         width: 33.333%;
     }
 }
 
-.episode {
+.article {
     @include card();
     height: 100%;
     display: flex;
