@@ -22,12 +22,11 @@ class ArticlesRoll extends React.Component {
 
   shouldShow = article => {
     const searchBy = this.state.searchBy;
-    const { title, topics, guests, description } = article.frontmatter;
+    const { title, description } = article.frontmatter;
 
     function searchQueryResult() {
       if (searchBy.length >= 2) {
         return title.toLowerCase().indexOf(searchBy) >= 0
-        || topics.toLowerCase().indexOf(searchBy) >= 0
         || description.toLowerCase().indexOf(searchBy) >= 0
       } else {
         return true;
@@ -59,10 +58,6 @@ class ArticlesRoll extends React.Component {
                 <div className="article-wrap" key={article.id}>
                   <div className="article">
                     <div className="article-title">{article.frontmatter.title}</div>
-                    <div className="article-tags">
-                      <div className='label'>Topics</div>
-                      <div className='value'>{article.frontmatter.topics}</div>
-                    </div>
                     <div className="article-description">{article.frontmatter.description}</div>
                     <div className="article-watch">
                       <a className="btn btn-primary" href={article.frontmatter.url} target="_blank">Read Article</a>
