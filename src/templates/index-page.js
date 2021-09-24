@@ -17,18 +17,20 @@ export const IndexPageTemplate = ({
       <Link to='/episodes' className='btn btn-primary'>See Episodes</Link>
     </section>
     <section>
-      <p>with your hosts:</p>
-      <div className='hosts'>
-        <div className='host'>
-          <h2>Fez</h2>
-          <p>photo, description, links</p>
-        </div>
-        <div className='separator'>and</div>
-        <div className='host'>
-          <h2>Icongrapher</h2>
-          <p>photo, description, links</p>
-        </div>
-      </div>
+     <div className='quick-access'>
+       <div className='quick-access-item'>
+         <h3>Podcast</h3>
+         
+       </div>
+       <div className='quick-access-item'>
+         <h3>Tutorials</h3>
+         
+       </div>
+       <div className='quick-access-item'>
+         <h3>Articles</h3>
+         
+       </div>
+     </div>
     </section>
   </>
 )
