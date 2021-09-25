@@ -18,12 +18,12 @@ export default class ContactPage extends React.Component {
               </a>
             </div>
             <div className='social'>
-              <a href='' target='_blank' rel='noreferrer'>
+              <a href='https://discord.gg/sVzp6gWBrC' target='_blank' rel='noreferrer'>
                 <FaDiscord color='#33b7ba' size={'4em'} />
               </a>
             </div>
             <div className='social'>
-              <a href='' target='_blank' rel='noreferrer'>
+              <a href='https://t.me/Eyeonicon' target='_blank' rel='noreferrer'>
                 <FaTelegramPlane color='#33b7ba' size={'4em'} />
               </a>
             </div>

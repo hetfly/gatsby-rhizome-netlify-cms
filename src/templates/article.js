@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PreviewImage from '../img/ep-preview.svg'
 import Content, { HTMLContent } from '../components/Content'
 
 export const ArticleTemplate = ({
@@ -69,7 +67,6 @@ const Article = ({ data }) => {
         title={articles.frontmatter.title}
         url={articles.frontmatter.url}
         featuredimage={articles.frontmatter.featuredimage}
-        description={articles.frontmatter.description}
       />
     </Layout>
   )

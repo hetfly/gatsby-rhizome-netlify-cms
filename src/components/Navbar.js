@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
-import Footer from './Footer'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -23,11 +20,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <header className={`${this.state.open ? 'open' : ''}`}>
-        <nav
-          className="navbar"
-          role="navigation"
-          aria-label="main-navigation"
-        >
+        <nav className="navbar">
             <div className="navbar-brand">
               <Link to="/" className="navbar-item">
                 <img src={logo} alt='Eye on Icon' width={200} height={70} />
@@ -62,7 +55,7 @@ const Navbar = class extends React.Component {
             </ul>
         </nav>
 
-        <div className="burger" onClick={() => this.toggleOpen()}><span className='lines'></span></div>
+        <button className="burger" onClick={(e) => this.toggleOpen()}><span className='lines'>menu</span></button>
       </header>
     )
   }

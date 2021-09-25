@@ -7,7 +7,7 @@ export default class EpisodesIndexPage extends React.Component {
     return (
       <Layout>
         <section className='top'>
-          <h1>Eye on Icon Token</h1>
+          <h1>Rhizome Dao Token</h1>
           <p>Coming soon !</p>
         </section>
       </Layout>

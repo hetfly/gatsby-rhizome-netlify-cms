@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import SearchImage from '../img/search.svg'
 
 class TutorialsRoll extends React.Component {
@@ -22,7 +22,7 @@ class TutorialsRoll extends React.Component {
 
   shouldShow = tutorial => {
     const searchBy = this.state.searchBy;
-    const { title, topics, guests, description } = tutorial.frontmatter;
+    const { title, topics, description } = tutorial.frontmatter;
 
     function searchQueryResult() {
       if (searchBy.length >= 2) {
@@ -47,7 +47,7 @@ class TutorialsRoll extends React.Component {
     return (
       <>
         <div className="search-wrap">
-          <img src={SearchImage} width={25} height={25} />
+          <img src={SearchImage} width={25} height={25} alt='search' />
           <input type="text" value={this.state.searchBy} onChange={e => this.handleSearch(e)}></input>
         </div>
         <div className="tutorials">
@@ -65,7 +65,7 @@ class TutorialsRoll extends React.Component {
                     </div>
                     <div className="tutorial-description">{tutorial.frontmatter.description}</div>
                     <div className="tutorial-watch">
-                      <a className="btn btn-primary" href={tutorial.frontmatter.url} target="_blank">Watch Tutorial</a>
+                      <a className="btn btn-primary" href={tutorial.frontmatter.url} target="_blank" rel="noreferrer">Watch Tutorial</a>
                     </div>
                   </div>
                 </div>

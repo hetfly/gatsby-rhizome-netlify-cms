@@ -177,13 +177,24 @@ $filterMaxWidth: 400px;
 .quick-access {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 30px;
+
+    h3 {
+        margin: 30px 0 10px;
+    }
 
     &-item {
         width: 100%;
+        display: flex;
+        flex-flow: column;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1200px) {
             width: 33.333%;
+        }
+
+        .episode-wrap, .article-wrap, .tutorial-wrap {
+            width: 100%;
+            flex-grow: 1;
         }
     }
 }

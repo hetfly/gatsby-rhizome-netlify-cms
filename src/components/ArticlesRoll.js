@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import SearchImage from '../img/search.svg'
 
 class ArticlesRoll extends React.Component {
@@ -46,7 +46,7 @@ class ArticlesRoll extends React.Component {
     return (
       <>
         <div className="search-wrap">
-          <img src={SearchImage} width={25} height={25} />
+          <img src={SearchImage} width={25} height={25} alt='search'/>
           <input type="text" value={this.state.searchBy} onChange={e => this.handleSearch(e)}></input>
         </div>
         <div className="articles">
@@ -60,7 +60,7 @@ class ArticlesRoll extends React.Component {
                     <div className="article-title">{article.frontmatter.title}</div>
                     <div className="article-description">{article.frontmatter.description}</div>
                     <div className="article-watch">
-                      <a className="btn btn-primary" href={article.frontmatter.url} target="_blank">Read Article</a>
+                      <a className="btn btn-primary" href={article.frontmatter.url} target="_blank" rel="noreferrer" >Read Article</a>
                     </div>
                   </div>
                 </div>

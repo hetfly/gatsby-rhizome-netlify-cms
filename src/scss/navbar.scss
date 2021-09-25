@@ -131,6 +131,10 @@ footer {
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-size: 0;
+    appearance: none;
+    background: transparent;
+    border: 0;
 
     @media(min-width: $respoBreak) {
         display: none;
