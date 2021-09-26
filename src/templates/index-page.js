@@ -138,6 +138,10 @@ export const Episode = ({episode: { node }}) => {
         <div className="episode-description">{node.frontmatter.description}</div>
         <div className="episode-watch">
           <a className="btn btn-primary" href={node.frontmatter.url} target="_blank" rel="noreferrer">Watch Episode</a>
+          {
+            node.frontmatter.anchorUrl &&
+            <a className="btn btn-primary" href={node.frontmatter.anchorUrl} target="_blank" rel="noreferrer">Anchor</a>
+          }
         </div>
       </div>
     </div>

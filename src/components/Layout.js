@@ -2,13 +2,12 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Navbar from '../components/Navbar'
 import './all.sass'
-import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import Particles from 'react-particles-js';
 import { particlesOptions } from '../../static/configs/particles-config';
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  // const { title, description } = useSiteMetadata();
 
   return (
     <>
