@@ -2,6 +2,7 @@
 templateKey: episode
 title: Eye on Icon -  Icon, Balanced, omm, Craft, Weekly News EP61
 url: https://youtu.be/7zaJH5L3aSA
+anchorUrl: ''
 date: 2021-08-19T06:29:23.728Z
 description: >+
   This weeks we have news from OMM, Balanced, Craft, Icon 2.0 market updates,

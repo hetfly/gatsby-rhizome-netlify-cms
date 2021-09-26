@@ -136,6 +136,7 @@ export default () => (
                 title
                 templateKey
                 url
+                anchorUrl
                 topics
                 guests
                 description

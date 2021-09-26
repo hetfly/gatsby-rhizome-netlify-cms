@@ -17,6 +17,7 @@ export default function useEspisodesData() {
               title
               templateKey
               url
+              anchorUrl
               topics
               guests
               description

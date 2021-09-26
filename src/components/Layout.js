@@ -46,9 +46,10 @@ const TemplateWrapper = ({ children }) => {
         {/* <meta property="og:title" content={title} /> */}
         <meta property="og:title" content='Eye on ICON' />
         <meta property="og:description" content='Latest stories from ICON ecosystem.' />
-        <meta property="og:image" content={`/static/img/ogimg.png`}
-          
-        />
+        <meta property="og:image:width" content='1200'/>
+        <meta property="og:image:height" content='630'/>
+        <meta property="og:image" content={`/static/img/ogimg.png`}/>
+        
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:site" content="@EyeonIcon1"/>
         <meta name="twitter:title" content="Eye on ICON"/>
