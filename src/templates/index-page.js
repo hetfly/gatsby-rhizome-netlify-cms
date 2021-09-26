@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import useEpisodesData from '../hooks/episodes';
 import useArticlesData from '../hooks/articles';
@@ -118,7 +118,7 @@ const Article = ({article: { node }}) => {
   )
 }
 
-const Episode = ({episode: { node }}) => {
+export const Episode = ({episode: { node }}) => {
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 
   return (

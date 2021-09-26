@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import SearchImage from '../img/search.svg'
+import { Episode } from '../templates/index-page'
 
 class EpisodesRoll extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class EpisodesRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: episodes } = data.allMarkdownRemark;
-    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    // const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     const shouldShow = this.shouldShow;
 
     return (
@@ -78,28 +79,30 @@ class EpisodesRoll extends React.Component {
           {episodes &&
             episodes.sort((a, b) => {
               return new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date);
-            }).map(({ node: episode }) => (
-              shouldShow(episode) && (
-                <div className="episode-wrap" key={episode.id}>
-                  <div className="episode">
-                    <div className={`episode-label ${episode.frontmatter.type.split(' ')[0].toLowerCase()}`}>{episode.frontmatter.type}</div>
-                    <div className="episode-title">{episode.frontmatter.title}</div>
-                    <div className="episode-date">{new Date(episode.frontmatter.date).toLocaleDateString("en-US", dateOptions)}</div>
-                    <div className="episode-tags">
-                      <div className='label'>Topics</div>
-                      <div className='value'>{episode.frontmatter.topics}</div>
-                    </div>
-                    <div className="episode-tags">
-                      <div className='label'>Guests</div>
-                      <div className='value'>{episode.frontmatter.guests}</div>
-                    </div>
-                    <div className="episode-description">{episode.frontmatter.description}</div>
-                    <div className="episode-watch">
-                      <a className="btn btn-primary" href={episode.frontmatter.url} target="_blank" rel="noreferrer">Watch Episode</a>
-                    </div>
-                  </div>
-                </div>
-              )
+            }).map(episode => (
+              shouldShow(episode.node) && <Episode episode={episode} />
+              
+              // (
+              //   <div className="episode-wrap" key={episode.id}>
+              //     <div className="episode">
+              //       <div className={`episode-label ${episode.frontmatter.type.split(' ')[0].toLowerCase()}`}>{episode.frontmatter.type}</div>
+              //       <div className="episode-title">{episode.frontmatter.title}</div>
+              //       <div className="episode-date">{new Date(episode.frontmatter.date).toLocaleDateString("en-US", dateOptions)}</div>
+              //       <div className="episode-tags">
+              //         <div className='label'>Topics</div>
+              //         <div className='value'>{episode.frontmatter.topics}</div>
+              //       </div>
+              //       <div className="episode-tags">
+              //         <div className='label'>Guests</div>
+              //         <div className='value'>{episode.frontmatter.guests}</div>
+              //       </div>
+              //       <div className="episode-description">{episode.frontmatter.description}</div>
+              //       <div className="episode-watch">
+              //         <a className="btn btn-primary" href={episode.frontmatter.url} target="_blank" rel="noreferrer">Watch Episode</a>
+              //       </div>
+              //     </div>
+              //   </div>
+              // )
             ))}
         </div>
       </>

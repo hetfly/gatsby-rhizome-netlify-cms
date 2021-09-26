@@ -41,15 +41,20 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#171717" />
 
-        <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+        {/* <meta property="og:title" content={title} /> */}
+        <meta property="og:title" content='Eye on ICON' />
+        <meta property="og:description" content='Latest stories from ICON ecosystem.' />
+        <meta property="og:image" content={`/static/img/ogimg.png`}
+          
         />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@EyeonIcon1"/>
+        <meta name="twitter:title" content="Eye on ICON"/>
+        <meta name="twitter:description" content="Latest stories from ICON ecosystem."/>
+        <meta name="twitter:image:src" content={`/static/img/ogimg.png`} />
+        <meta name="twitter:image:alt" content="Eye on ICON"/>
       </Helmet>
 
       <Particles params={particlesOptions}/>
