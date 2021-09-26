@@ -74,23 +74,30 @@ header {
             &:before {
                 content: '';
                 height: 1px;
-                width: 0;
-                bottom: 0;
+                width: 50%;
+                bottom: 5px;
                 margin-bottom: -1px;
-                background: $color-light;
+                background: $main-color;
                 display: block;
                 position: absolute;
-                transition: all ease 0.25s;
+                transition: all ease-out 0.15s;
                 margin-left: 0;
+                left: 25%;
+                opacity: 0;
             }
 
-            &:hover, &:focus {
+            &:hover, &:focus, &.active {
                 color: $main-color;
 
                 &:before {
-                    //width: 100%;
+                    width: 80%;
+                    left: 10%;
+                    opacity: 1;
+                    bottom: 10px;
                 }
             }
+
+
         }
     }
 }

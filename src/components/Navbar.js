@@ -28,27 +28,27 @@ const Navbar = class extends React.Component {
             </div>
             <ul className={`navbar-menu`}>
               <li>
-                <Link className="navbar-item" to="/episodes">
+                <Link className="navbar-item" to="/episodes" activeClassName="active">
                   Podcast
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/tutorials">
+                <Link className="navbar-item" to="/tutorials" activeClassName="active">
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/articles">
+                <Link className="navbar-item" to="/articles" activeClassName="active">
                   Articles
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/token">
+                <Link className="navbar-item" to="/token" activeClassName="active">
                   Token
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/contact">
+                <Link className="navbar-item" to="/contact" activeClassName="active">
                   Contact
                 </Link>
               </li>
