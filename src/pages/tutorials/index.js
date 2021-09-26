@@ -9,7 +9,7 @@ export default class TutorialsPage extends React.Component {
       <Layout>
         <section className='top'>
           <h1>ICON Tutorials</h1>
-          <p>Tutorials description</p>
+          <p>We ensure every Dapp on ICON and it's BTP connected chains has a tutorial covering it to ensure you know how to get started.</p>
         </section>
         <section>
           <p>Search for tutorials</p>

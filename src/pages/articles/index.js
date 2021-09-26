@@ -9,7 +9,7 @@ export default class ArticlesPage extends React.Component {
       <Layout>
         <section className='top'>
           <h1>ICON Articles</h1>
-          <p>Latest articles from ICON ecosysytem</p>
+          <p>Find all the articles released coverng the ICON ecosystem</p>
         </section>
         <section>
           <p>Search for articles</p>
