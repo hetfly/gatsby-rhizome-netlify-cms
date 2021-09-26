@@ -87,10 +87,13 @@ IndexPage.propTypes = {
 }
 
 export const Tutorial = ({tutorial: { node }}) => {
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+
   return (
     <div className="tutorial-wrap" key={node.id}>
       <div className="tutorial">
         <div className="tutorial-title">{node.frontmatter.title}</div>
+        <div className="episode-date">{new Date(node.frontmatter.date).toLocaleDateString("en-US", dateOptions)}</div>
         <div className="tutorial-tags">
           <div className='label'>Topics</div>
           <div className='value'>{node.frontmatter.topics}</div>
@@ -105,10 +108,13 @@ export const Tutorial = ({tutorial: { node }}) => {
 }
 
 export const Article = ({article: { node }}) => {
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+
   return (
     <div className="article-wrap" key={node.id}>
       <div className="article">
         <div className="article-title">{node.frontmatter.title}</div>
+        <div className="episode-date">{new Date(node.frontmatter.date).toLocaleDateString("en-US", dateOptions)}</div>
         <div className="article-description">{node.frontmatter.description}</div>
         <div className="article-watch">
           <a className="btn btn-primary" href={node.frontmatter.url} target="_blank" rel="noreferrer">Read Article</a>
