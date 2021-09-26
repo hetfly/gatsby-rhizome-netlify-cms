@@ -80,29 +80,7 @@ class EpisodesRoll extends React.Component {
             episodes.sort((a, b) => {
               return new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date);
             }).map(episode => (
-              shouldShow(episode.node) && <Episode episode={episode} />
-              
-              // (
-              //   <div className="episode-wrap" key={episode.id}>
-              //     <div className="episode">
-              //       <div className={`episode-label ${episode.frontmatter.type.split(' ')[0].toLowerCase()}`}>{episode.frontmatter.type}</div>
-              //       <div className="episode-title">{episode.frontmatter.title}</div>
-              //       <div className="episode-date">{new Date(episode.frontmatter.date).toLocaleDateString("en-US", dateOptions)}</div>
-              //       <div className="episode-tags">
-              //         <div className='label'>Topics</div>
-              //         <div className='value'>{episode.frontmatter.topics}</div>
-              //       </div>
-              //       <div className="episode-tags">
-              //         <div className='label'>Guests</div>
-              //         <div className='value'>{episode.frontmatter.guests}</div>
-              //       </div>
-              //       <div className="episode-description">{episode.frontmatter.description}</div>
-              //       <div className="episode-watch">
-              //         <a className="btn btn-primary" href={episode.frontmatter.url} target="_blank" rel="noreferrer">Watch Episode</a>
-              //       </div>
-              //     </div>
-              //   </div>
-              // )
+              shouldShow(episode.node) && <Episode episode={episode} key={episode.node.id} />
             ))}
         </div>
       </>

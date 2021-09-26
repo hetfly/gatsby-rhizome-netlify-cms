@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import SearchImage from '../img/search.svg'
+import { Tutorial } from '../templates/index-page'
 
 class TutorialsRoll extends React.Component {
   constructor(props) {
@@ -42,8 +43,6 @@ class TutorialsRoll extends React.Component {
     const { edges: tutorials } = data.allMarkdownRemark;
     const shouldShow = this.shouldShow;
 
-    console.log(tutorials);
-
     return (
       <>
         <div className="search-wrap">
@@ -54,22 +53,8 @@ class TutorialsRoll extends React.Component {
           {tutorials &&
             tutorials.sort((a, b) => {
               return new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date);
-            }).map(({ node: tutorial }) => (
-              shouldShow(tutorial) && (
-                <div className="tutorial-wrap" key={tutorial.id}>
-                  <div className="tutorial">
-                    <div className="tutorial-title">{tutorial.frontmatter.title}</div>
-                    <div className="tutorial-tags">
-                      <div className='label'>Topics</div>
-                      <div className='value'>{tutorial.frontmatter.topics}</div>
-                    </div>
-                    <div className="tutorial-description">{tutorial.frontmatter.description}</div>
-                    <div className="tutorial-watch">
-                      <a className="btn btn-primary" href={tutorial.frontmatter.url} target="_blank" rel="noreferrer">Watch Tutorial</a>
-                    </div>
-                  </div>
-                </div>
-              )
+            }).map(tutorial => (
+              shouldShow(tutorial.node) && <Tutorial tutorial={tutorial} key={tutorial.node.id} />
             ))}
         </div>
       </>

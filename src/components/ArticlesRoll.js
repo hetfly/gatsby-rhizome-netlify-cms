@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import SearchImage from '../img/search.svg'
+import { Article } from '../templates/index-page'
 
 class ArticlesRoll extends React.Component {
   constructor(props) {
@@ -41,8 +42,6 @@ class ArticlesRoll extends React.Component {
     const { edges: articles } = data.allMarkdownRemark;
     const shouldShow = this.shouldShow;
 
-    console.log(articles);
-
     return (
       <>
         <div className="search-wrap">
@@ -53,18 +52,8 @@ class ArticlesRoll extends React.Component {
           {articles &&
             articles.sort((a, b) => {
               return new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date);
-            }).map(({ node: article }) => (
-              shouldShow(article) && (
-                <div className="article-wrap" key={article.id}>
-                  <div className="article">
-                    <div className="article-title">{article.frontmatter.title}</div>
-                    <div className="article-description">{article.frontmatter.description}</div>
-                    <div className="article-watch">
-                      <a className="btn btn-primary" href={article.frontmatter.url} target="_blank" rel="noreferrer" >Read Article</a>
-                    </div>
-                  </div>
-                </div>
-              )
+            }).map(article => (
+              shouldShow(article.node) && <Article article={article} key={article.node.id} />
             ))}
         </div>
       </>

@@ -86,7 +86,7 @@ IndexPage.propTypes = {
   }),
 }
 
-const Tutorial = ({tutorial: { node }}) => {
+export const Tutorial = ({tutorial: { node }}) => {
   return (
     <div className="tutorial-wrap" key={node.id}>
       <div className="tutorial">
@@ -104,7 +104,7 @@ const Tutorial = ({tutorial: { node }}) => {
   )
 }
 
-const Article = ({article: { node }}) => {
+export const Article = ({article: { node }}) => {
   return (
     <div className="article-wrap" key={node.id}>
       <div className="article">
