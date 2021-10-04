@@ -9,7 +9,7 @@ export default class EyeOnIconIndexPage extends React.Component {
       <Layout>
         <section className='top'>
           <h1>Podcast Episodes</h1>
-          <p>Eye on ICON where we bring you all the latest news, interviews and community events in the ICON and BTP connected ecosystems.</p>
+          <p>Eye on Icon - we bring you all the latest news, interviews and community events in the Icon and BTP connected ecosystems.</p>
         </section>
         <section>
           <p>Search for topics, guests or anything else</p>
