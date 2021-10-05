@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         {/* <title>{title}</title> */}
         <title>Eye on ICON</title>
-        <meta name="description" content='Latest stories from ICON ecosystem.' />
+        <meta name="description" content='Latest stories across the Icon ecosystem.' />
         <link rel="apple-touch-icon" sizes="57x57" href={`${withPrefix('/')}favicon/apple-icon-57x57.png`} />
         <link rel="apple-touch-icon" sizes="60x60" href={`${withPrefix('/')}favicon/apple-icon-60x60.png`} />
         <link rel="apple-touch-icon" sizes="72x72" href={`${withPrefix('/')}favicon/apple-icon-72x72.png`} />
@@ -33,7 +33,7 @@ const TemplateWrapper = ({ children }) => {
 
         {/* <meta property="og:title" content={title} /> */}
         <meta property="og:title" content='Eye on ICON' />
-        <meta property="og:description" content='Latest stories from ICON ecosystem.' />
+        <meta property="og:description" content='Latest stories across the Icon ecosystem.' />
         <meta property="og:image:width" content='1200'/>
         <meta property="og:image:height" content='630'/>
         <meta property="og:image" content={`${withPrefix('/')}img/ogimg.png`}/>
@@ -41,7 +41,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:site" content="@EyeonIcon1"/>
         <meta name="twitter:title" content="Eye on ICON"/>
-        <meta name="twitter:description" content="Latest stories from ICON ecosystem."/>
+        <meta name="twitter:description" content="Latest stories across the Icon ecosystem."/>
         <meta name="twitter:image:src" content={`${withPrefix('/')}img/ogimg.png`} />
         <meta name="twitter:image:alt" content="Eye on ICON"/>
       </Helmet>
