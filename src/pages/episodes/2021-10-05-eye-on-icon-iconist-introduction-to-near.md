@@ -8,6 +8,6 @@ description: Today in our second BTP edition episode, I sit down with Sasha who
   takes us through the Near protocol. He covers the early days, and runs through
   many different protocols being build on Near.
 topics: Near
-guests: Aliaksandr Hudzilin "sasha"
+guests: Aliaksandr Hudzilin "Sasha"
 type: Interview
 ---
