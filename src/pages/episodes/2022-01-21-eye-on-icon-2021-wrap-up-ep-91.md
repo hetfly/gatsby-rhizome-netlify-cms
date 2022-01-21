@@ -3,7 +3,7 @@ templateKey: episode
 title: Eye on Icon - 2021 wrap up EP-91
 url: https://youtu.be/ZlEOu6YTqYQ
 anchorUrl: https://anchor.fm/eye-on-icon/episodes/Eye-on-Icon---2021-wrap-up-EP-91-e1cbdii/a-a75tt2e
-date: 2022-01-21T20:05:22.761Z
+date: 2021-12-30T20:05:22.761Z
 description: >-
   The final episode of the year! We break tradition and reflect on the year
   that's passed.
