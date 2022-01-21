@@ -8,6 +8,6 @@ description: Weekly News is out! This week is a little different, we have
   Bearish bull on the show and he shares with us his Technical analysis on, BTC,
   ICX, RFOX, ETH while I slip the news in between those. Tune in!
 topics: "BTC TA, Icon 2.0, Balanced News, ICX RFOX ETH Technical Analysis "
-guests: "Bearish Bull "
+guests: " Fez & The Bearish Bull "
 type: Weekly News
 ---
